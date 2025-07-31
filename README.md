@@ -1,2 +1,37 @@
 # Astrology-Trading-Automation
 astrology-trading-automation
+# Astrology Trading Automation
+
+This project provides a Python script to detect significant astrological events — specifically angular aspects (like squares) between planets such as the Moon and Saturn — using Swiss Ephemeris data. The output is saved as a CSV file containing event timestamps and planetary positions. Additionally, a MetaTrader 4 (MQL4) expert advisor example is included to read the CSV file and automatically open trading positions based on these astrological events.
+
+---
+
+## Features
+
+- Calculate angular differences and latitudes between planets using Swiss Ephemeris.
+- Automatically detect close-to-exact square aspects within a specified time range.
+- Refine event times to minute-level accuracy.
+- Export results to a CSV file for easy integration.
+- MQL4 code to read the CSV file and open trades (buy/sell) in MetaTrader 4 based on astrology signals.
+- Fully customizable configuration for planets, angles, tolerances, and date ranges.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- `swisseph` Python library (`pip install pyswisseph`)
+- Ephemeris data files (`sepl_18.se1`, `semo_18.se1`) placed in your configured ephemeris folder
+- MetaTrader 4 platform to run MQL4 expert advisor
+
+### Running the Python Script
+
+1. Configure the `EPHE_PATH` in the Python script to point to your ephemeris files directory.
+2. Set your desired date range, planets, and tolerance.
+3. Run the script to generate the CSV file of astrological event timestamps.
+
+```bash
+python moon_saturn_squares.py
+
